@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<div class="usuarios">
+    <form [formGroup]="form" (submit)="salvarDadosUsuario()">
+        <mat-card class="card-principal">        
+            <mat-card-title class="card-titulo">Cadastro
+            </mat-card-title>
+            <mat-card class="cadastro">
+                <mat-form-field class="input-user">
+                    <mat-label>Nome</mat-label>
+                    <input matInput formControlName="nome" name="nome" placeholder="Digite seu nome" required>
+                    <mat-error>{{error}}</mat-error>
+                </mat-form-field>
+                <mat-form-field class="input-user">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput placeholder="exemplo@email.com" formControlName="email" name="email" required>
+                    <mat-error *ngIf="form.get('email')?.hasError('required') || form.get('email')?.hasError('email')">{{validaEmail()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field class="input-user">
+                    <mat-label>Telefone</mat-label>
+                    <span matPrefix>+55 &nbsp;</span>
+                    <input matInput type="tel" formControlName="telefone" name="telefone" placeholder="xx-xxxx-xxxx" required>
+                    <mat-error>{{error}}</mat-error>
+                </mat-form-field>
+            </mat-card>
+        
+            <button mat-raised-button class="bt-cad" color="accent" type="submit" [disabled]="!form.valid">Cadastrar</button>
+        </mat-card>    
+    </form>
+
+    <div class="clientes">
+        <div class="cliente1">
+            <p class="cliente-nome">Paulo Andre</p>
+            <p class="cliente-email">paulo@email.com</p>
+            <p class="cliente-numero">3349 6788</p>
+            <button class="bt-editar" mat-raised-button >Editar</button>
+            <button class="bt-excluir" mat-raised-button >Excluir</button>
+        </div>
+        <div class="cliente2">
+            <p class="cliente-nome">Marcos Lucio</p>
+            <p class="cliente-email">marcos@email.com</p>
+            <p class="cliente-numero">3349 6788</p>
+            <button class="bt-editar" mat-raised-button >Editar</button>
+            <button class="bt-excluir" mat-raised-button >Excluir</button>
+        </div>
+        <div class="cliente3">
+            <p class="cliente-nome">Laura Port</p>
+            <p class="cliente-email">laura@email.com</p>
+            <p class="cliente-numero">3349 6788</p>
+            <button class="bt-editar" mat-raised-button >Editar</button>
+            <button class="bt-excluir" mat-raised-button >Excluir</button>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

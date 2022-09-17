@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    width: 100%;    
+}
+
+.cabeçalho{
+    max-width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #9BD2DE;
+}
+
+.menu{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cabeçalho-item{
+    display: flex;
+    flex-direction: row;
+    padding-top: 55px;
+    gap: 11px;
+}
+
+.cabeçalho-img{
+    width: 61px;
+    height: 61px;
+}
+
+.cabeçalho-tela{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #616162;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 30px;
+    width: 102px;
+    height: 35px;
+    margin: 0;
+}
+
+// h2{
+//     font-family: 'Roboto', sans-serif;
+//     color: #000000;
+//     font-weight: 400;
+//     font-size: 25px;
+//     margin-top: 24px;
+// }
+
+.texto-usuario{
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 18px;
+}
+
+.texto-msg{
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 18px;
+    width: 88px;
+    height: 25px;
+    margin: 0;
+}
+
+.cabeçalho-menu{
+    display: flex;
+    gap: 44px;
+    padding-top: 79px;
+}
+
+.btHome{
+    font-family: 'Roboto', sans-serif;
+    color: #4B2142;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btHome:hover{
+    color: #F6511D;
+    text-decoration: underline;
+}
+
+.btUsuarios{
+    font-family: 'Roboto', sans-serif;
+    color: #4B2142;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btUsuarios:hover{
+    color: #F6511D;
+    text-decoration: underline;
+}
+
+.btFilmes{
+    font-family: 'Roboto', sans-serif;
+    color: #4B2142;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btFilmes:hover{
+    color: #F6511D;
+    text-decoration: underline;
+}
+
+.btGenero{
+    font-family: 'Roboto', sans-serif;
+    color: #4B2142;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.btGenero:hover{
+    color: #F6511D;
+    text-decoration: underline;
+}

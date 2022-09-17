@@ -1,0 +1,40 @@
+<app-header></app-header>  
+
+<div class="genero">
+    <div class="topoTitulo">
+        <mat-card-title class="card-titulo">Gênero</mat-card-title>
+        <img mat-card-image src="'src/assets/mascara.svg'" onError="this.src = 'assets/mascara.svg'" class="mascara-img">
+    </div>
+    <form [formGroup]="form" (submit)="salvarDadosGenero()">
+        <div class="div-zero">
+            <div class="card-principal">
+                <mat-form-field class="cadastro-genero" appearance="fill">
+                    <mat-label>Cadastrar Gênero</mat-label>
+                    <input type="text" matInput formControlName="tituloFilmes" name="tituloFilmes" placeholder="Gênero" required>
+                    <mat-error>{{error}}</mat-error>
+                </mat-form-field>
+                
+                <button class="btSalvar" mat-raised-button color="warn" type="submit" [disabled]="!form.valid">Salvar</button>
+            </div>
+            <div class="lista-genero">
+                <div class="genero1"> 
+                    <p class="nome-genero">Terror</p>
+                    <button class="btEditar" mat-raised-button>Editar</button>
+                    <button class="btExcluir" mat-raised-button>Excluir</button>
+                </div>
+                <div class="genero2">
+                    <p class="nome-genero">Ação</p>
+                    <button class="btEditar" mat-raised-button>Editar</button>
+                    <button class="btExcluir" mat-raised-button>Excluir</button>
+                </div>
+                <div class="genero3">
+                    <p class="nome-genero">Comédia</p>
+                    <button class="btEditar" mat-raised-button>Editar</button>
+                    <button class="btExcluir" mat-raised-button>Excluir</button>
+                </div>
+            </div>  
+        </div>
+    </form>  
+</div>
+
+<app-footer></app-footer>

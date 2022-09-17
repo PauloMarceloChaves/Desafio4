@@ -1,0 +1,134 @@
+.genero{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.topoTitulo{
+    max-width: 1024px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card-titulo{
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 32px;
+    margin-bottom: 13px;
+}
+
+.mascara-img{
+    width: 100px;
+    height: 100px;
+}
+
+.div-zero{
+    padding: 0;
+}
+
+.card-principal{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 59px;
+    margin-top: 32px;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.cadastro-genero{
+    max-width: 1024px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    width: 400px;
+    height: 58px;
+    gap: 25px;
+    padding: 0;
+}
+
+.btSalvar{
+    width: 180px;
+    height: 58px;
+    margin-top: 35px;
+    background-color: #F6511D;
+    color: #FFFFFF;
+    border: 2px solid #F6511D;
+    justify-content: right;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 443px;
+    padding: 0;
+}
+
+.btSalvar:hover{
+    border-color: #D73504;
+    background-color: #D73504;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #F6511D !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: #F6511D !important;
+}
+
+.lista-genero{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 58px;
+}
+
+.genero1, .genero2, .genero3{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 33px;
+}
+
+.nome-genero{
+    width: 775px;
+}
+
+.btEditar{
+    width: 125px;
+    height: 35px;
+    background-color: #F6511D;
+    color: #FFFFFF;
+    border: 2px solid #F6511D;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.btEditar:hover{
+    border-color: #D73504;
+    background-color: #D73504;
+}
+
+.btExcluir{
+    width: 125px;
+    height: 35px;
+    background-color: #41B8D2;
+    color: #000000;
+    border: 2px solid #41B8D2;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.btExcluir:hover{
+    border-color: #2a9eb8;
+    background-color: #2a9eb8;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}

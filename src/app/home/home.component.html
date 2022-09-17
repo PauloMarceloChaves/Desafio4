@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="home">
+  <mat-card class="card-principal">
+    <mat-card-title class="card-titulo">
+      Monte sua coletânea de filmes...
+    </mat-card-title>
+
+    <mat-card class="card-subtitle">
+      <p class="card-subtitulo">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
+      </p>
+      
+      <p class="card-text">{{longText}}</p>
+    </mat-card>
+  </mat-card>
+
+  <mat-card class="card-secundario">
+    <mat-card class="card-cinema">      
+      <img mat-card-image src="'src/assets/filme.svg'" onError="this.src = 'assets/filme.svg'" class="filme-img" >
+      <mat-card class="card-subtitulo">Filmes</mat-card>
+      <p class="card-text">{{longTextCard}}</p>
+    </mat-card>
+
+    <mat-card class="card-mascara">
+      <img mat-card-image src="'src/assets/mascara.svg'" onError="this.src = 'assets/mascara.svg'" class="mascara-img" >
+      <mat-card class="card-subtitulo">Categoria</mat-card>
+      <p class="card-text">{{longTextCard}}</p>      
+    </mat-card>
+  </mat-card>
+</div>
+
+<app-footer></app-footer>

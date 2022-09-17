@@ -1,0 +1,138 @@
+.filmes{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.topoTitulo{
+    max-width: 1024px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card-titulo{
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 21px;
+    margin-bottom: 12px;
+}
+
+.filme-img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 9px;
+}
+
+.card-principal{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 70px;
+    padding: 0;
+}
+
+.cadastroFilme{
+    max-width: 1024px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    width: 400px;
+    height: 58px;
+    gap: 25px;
+    padding: 0;
+}
+
+.escolherGenero{
+    width: 400px;
+    height: 58px;
+    padding: 0;
+    margin-left: 8px;
+}
+
+.btSalvar{
+    width: 180px;
+    height: 58px;
+    margin-top: 35px;
+    background-color: #F6511D;
+    color: #FFFFFF;
+    border: 2px solid #F6511D;
+    justify-content: right;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 25px;
+}
+
+.btSalvar:hover{
+    border-color: #D73504;
+    background-color: #D73504;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #F6511D !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    background-color: #F6511D !important;
+}
+
+.lista-filmes{
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.filme1, .filme2, .filme3{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 33px;
+}
+
+.lista-nome{
+   width: 305px; 
+}
+
+.lista-genero{
+    width: 470px;
+}
+
+.btEditar{
+    width: 125px;
+    height: 35px;
+    background-color: #F6511D;
+    color: #FFFFFF;
+    border: 2px solid #F6511D;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.btEditar:hover{
+    border-color: #D73504;
+    background-color: #D73504;
+}
+
+.btExcluir{
+    width: 125px;
+    height: 35px;
+    background-color: #41B8D2;
+    color: #000000;
+    border: 2px solid #41B8D2;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.btExcluir:hover{
+    border-color: #2a9eb8;
+    background-color: #2a9eb8;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}

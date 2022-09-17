@@ -1,0 +1,35 @@
+<div class="cabeçalho">
+    <div class="menu">
+        <div>
+            <div class="cabeçalho-item">
+                <img [src]="'src/assets/logo.svg'" onError="this.src = 'assets/logo.svg'" class="cabeçalho-img">
+                <div class="cabeçalho-tela">
+                    <h1>Filmes</h1>
+                    <h3>Collection</h3>
+                </div>
+            </div>
+            <!-- O texto para cada página -->
+            <div>
+                <h2 class="texto-usuario" *ngIf="router.routerState.snapshot.url == '/home'">Conheça nossa Coletânea</h2>
+            </div>
+
+            <div>
+                <h2 class="texto-usuario" *ngIf="router.routerState.snapshot.url == '/usuarios'">Faça o Cadastro de usuários e edite, caso necessário<br>Pronto para cadastrar?</h2>
+            </div>
+
+            <div>
+                <h2 class="texto-usuario" *ngIf="router.routerState.snapshot.url == '/filmes'">Cadastre os filmes de sua preferência</h2>
+            </div>
+
+            <div>
+                <h2 class="texto-usuario" *ngIf="router.routerState.snapshot.url == '/genero'">Cadastre os gêneros dos filmes</h2>
+            </div>
+        </div>
+        <nav class="cabeçalho-menu">
+            <a routerLink="../home" title="Ir para Home" class="btHome">Home</a>
+            <a routerLink="../usuarios" title="Ir para Usuários" class="btUsuarios">Usuários</a>
+            <a routerLink="../filmes" title="Ir para Filmes" class="btFilmes">Filmes</a>
+            <a routerLink="../genero" title="Ir para Gênero" class="btGenero">Gênero</a>
+        </nav>
+    </div>
+</div>

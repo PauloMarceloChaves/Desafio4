@@ -1,0 +1,52 @@
+<app-header></app-header>  
+
+<div class="Filmes">
+    <div class="topoTitulo">
+        <mat-card-title class="card-titulo">Filmes</mat-card-title>
+        <img mat-card-image src="'src/assets/filme.svg'" onError="this.src = 'assets/filme.svg'" class="filme-img" >
+    </div>
+    <form [formGroup]="form" (submit)="salvarDadosFilme()">
+        <div class="card-principal">
+            <mat-form-field class="cadastroFilme" appearance="fill">
+                <mat-label>Cadastrar Filmes</mat-label>
+                <input type="text" matInput formControlName="tituloFilmes" name="tituloFilmes" placeholder="Título do Filme" required>
+                <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+            <mat-form-field class="escolherGenero" aspect="fill">
+                <mat-label>Gênero</mat-label>
+                <mat-select disabledRipple>
+                    <mat-option value="drama"> Drama </mat-option>
+                    <mat-option value="comedia"> Comédia </mat-option>
+                    <mat-option value="suspense"> Suspense </mat-option>
+                    <mat-option value="terror"> Terror </mat-option>
+                    <mat-option value="acao"> Ação </mat-option>
+                    <mat-option value="musical"> Musical </mat-option>
+                    <mat-option value="infantil"> Infantil </mat-option>
+                </mat-select>    
+            </mat-form-field>
+            <button class="btSalvar" mat-raised-button color="warn" type="submit" [disabled]="!form.valid">Salvar</button>
+        </div>
+        <div class="lista-filmes">
+            <div class="filme1"> 
+                <p class="lista-nome">Os Outros</p>
+                <p class="lista-genero">Terror</p>
+                <button class="btEditar" mat-raised-button>Editar</button>
+                <button class="btExcluir" mat-raised-button>Excluir</button>
+            </div>
+            <div class="filme2">
+                <p class="lista-nome">Até O Último Homem</p>
+                <p class="lista-genero">Ação</p>
+                <button class="btEditar" mat-raised-button>Editar</button>
+                <button class="btExcluir" mat-raised-button>Excluir</button>
+            </div>
+            <div class="filme3">
+                <p class="lista-nome">O Máscara</p>
+                <p class="lista-genero">Comédia</p>
+                <button class="btEditar" mat-raised-button>Editar</button>
+                <button class="btExcluir" mat-raised-button>Excluir</button>
+            </div>
+        </div>
+    </form>    
+</div>
+
+<app-footer></app-footer>
