@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <div class="usuarios">
-    <form [formGroup]="form" (submit)="salvarDadosUsuario()">
+    <form [formGroup]="formUsuario">
         <mat-card class="card-principal">        
             <mat-card-title class="card-titulo">Cadastro
             </mat-card-title>
@@ -14,7 +14,7 @@
                 <mat-form-field class="input-user">
                     <mat-label>E-mail</mat-label>
                     <input matInput placeholder="exemplo@email.com" formControlName="email" name="email" required>
-                    <mat-error *ngIf="form.get('email')?.hasError('required') || form.get('email')?.hasError('email')">{{validaEmail()}}</mat-error>
+                    <mat-error *ngIf="formUsuario.get('email')?.hasError('required') || formUsuario.get('email')?.hasError('email')">{{validaEmail()}}</mat-error>
                 </mat-form-field>
                 <mat-form-field class="input-user">
                     <mat-label>Telefone</mat-label>
@@ -24,19 +24,19 @@
                 </mat-form-field>
             </mat-card>
         
-            <button mat-raised-button class="bt-cad" color="accent" type="submit" [disabled]="!form.valid">Cadastrar</button>
+            <button mat-raised-button class="bt-cad" color="accent" type="submit" [disabled]="!formUsuario.valid" (click)="cadastrarDadosUsuario()">Cadastrar</button>
         </mat-card>    
     </form>
 
-    <div class="clientes">
+    <div class="clientes" *ngFor="let element of listaUsuario">
         <div class="cliente1">
-            <p class="cliente-nome">Paulo Andre</p>
-            <p class="cliente-email">paulo@email.com</p>
-            <p class="cliente-numero">3349 6788</p>
-            <button class="bt-editar" mat-raised-button >Editar</button>
-            <button class="bt-excluir" mat-raised-button >Excluir</button>
+            <p class="cliente-nome">{{element.nome}}</p>
+            <p class="cliente-email">{{element.email}}</p>
+            <p class="cliente-numero">{{element.tel}}</p>
+            <button class="bt-editar" mat-raised-button (click)="editarUsuario(element)">Editar</button>
+            <button class="bt-excluir" mat-raised-button (click)="excluirUsuario(element.id)">Excluir</button>
         </div>
-        <div class="cliente2">
+        <!-- <div class="cliente2">
             <p class="cliente-nome">Marcos Lucio</p>
             <p class="cliente-email">marcos@email.com</p>
             <p class="cliente-numero">3349 6788</p>
@@ -49,7 +49,7 @@
             <p class="cliente-numero">3349 6788</p>
             <button class="bt-editar" mat-raised-button >Editar</button>
             <button class="bt-excluir" mat-raised-button >Excluir</button>
-        </div>
+        </div> -->
     </div>
 </div>
 

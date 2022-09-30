@@ -5,7 +5,7 @@
         <mat-card-title class="card-titulo">Filmes</mat-card-title>
         <img mat-card-image src="'src/assets/filme.svg'" onError="this.src = 'assets/filme.svg'" class="filme-img" >
     </div>
-    <form [formGroup]="form" (submit)="salvarDadosFilme()">
+    <form [formGroup]="formFilmes">
         <div class="card-principal">
             <mat-form-field class="cadastroFilme" appearance="fill">
                 <mat-label>Cadastrar Filmes</mat-label>
@@ -14,37 +14,46 @@
             </mat-form-field>
             <mat-form-field class="escolherGenero" aspect="fill">
                 <mat-label>Gênero</mat-label>
-                <mat-select disabledRipple>
-                    <mat-option value="drama"> Drama </mat-option>
+                <mat-select formControlName="selectGenero" name="selectGenero" disabledRipple>
+                    <mat-option *ngFor="let element of listaGenero" value={{element.genero}}>{{element.genero}}</mat-option>
+                    <!-- <mat-option value="drama"> Drama </mat-option>
                     <mat-option value="comedia"> Comédia </mat-option>
                     <mat-option value="suspense"> Suspense </mat-option>
                     <mat-option value="terror"> Terror </mat-option>
                     <mat-option value="acao"> Ação </mat-option>
                     <mat-option value="musical"> Musical </mat-option>
-                    <mat-option value="infantil"> Infantil </mat-option>
+                    <mat-option value="infantil"> Infantil </mat-option> -->
                 </mat-select>    
             </mat-form-field>
-            <button class="btSalvar" mat-raised-button color="warn" type="submit" [disabled]="!form.valid">Salvar</button>
+            <button class="btSalvar" (click)='salvarDadosFilme()' mat-raised-button color="warn" type="submit" [disabled]="!formFilmes.valid">Salvar</button>
         </div>
-        <div class="lista-filmes">
+
+        <div *ngFor="let element of listaFilme" class="listaFilmes">
             <div class="filme1"> 
-                <p class="lista-nome">Os Outros</p>
-                <p class="lista-genero">Terror</p>
+                <p class="listaNome">{{element.filme}}</p>
+                <p class="listaGenero">{{element.genero}}</p>
+                <button class="btEditar" mat-raised-button (click)="editarFilme(element)">Editar</button>
+                <button class="btExcluir" mat-raised-button (click)="excluirFilme(element.id)">Excluir</button>
+            </div>
+        <!-- <div class="lista-filmes">
+            <div class="filme1"> 
+                <p class="listaNome">Os Outros</p>
+                <p class="listaGenero">Terror</p>
                 <button class="btEditar" mat-raised-button>Editar</button>
                 <button class="btExcluir" mat-raised-button>Excluir</button>
             </div>
             <div class="filme2">
-                <p class="lista-nome">Até O Último Homem</p>
-                <p class="lista-genero">Ação</p>
+                <p class="listaNome">Até O Último Homem</p>
+                <p class="listaGenero">Ação</p>
                 <button class="btEditar" mat-raised-button>Editar</button>
                 <button class="btExcluir" mat-raised-button>Excluir</button>
             </div>
             <div class="filme3">
-                <p class="lista-nome">O Máscara</p>
-                <p class="lista-genero">Comédia</p>
+                <p class="listaNome">O Máscara</p>
+                <p class="listaGenero">Comédia</p>
                 <button class="btEditar" mat-raised-button>Editar</button>
                 <button class="btExcluir" mat-raised-button>Excluir</button>
-            </div>
+            </div> -->
         </div>
     </form>    
 </div>

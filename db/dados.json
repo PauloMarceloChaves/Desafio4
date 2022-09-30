@@ -1,0 +1,72 @@
+{
+  "usuarios": [
+    {
+      "id": 5,
+      "nome": "Test3",
+      "email": "teste3@teste3",
+      "tel": "71 9999-9988"
+    },
+    {
+      "id": 6,
+      "nome": "Teste5",
+      "email": "teste5@teste5",
+      "tel": "71 9999-5555"
+    },
+    {
+      "id": 7,
+      "nome": "Olaf",
+      "email": "teste5@teste5",
+      "tel": "71 9999-9999"
+    }
+  ],
+  "filmes": [
+    {
+      "id": 1,
+      "filme": "Hora do Rush 2",
+      "genero": "Comédiaz"
+    },
+    {
+      "id": 1,
+      "filme": "Hora do Rush",
+      "genero": "Comédia"
+    },
+    {
+      "id": 2,
+      "filme": "Pinoquio",
+      "genero": "Comédiaz"
+    },
+    {
+      "id": 3,
+      "filme": "T",
+      "genero": "Comédia"
+    },
+    {
+      "id": 4,
+      "filme": "SuperM",
+      "genero": "Documentário"
+    },
+    {
+      "id": 5,
+      "filme": "M",
+      "genero": "Drama"
+    }
+  ],
+  "genero": [
+    {
+      "id": 1,
+      "genero": "Comédiaz"
+    },
+    {
+      "id": 1,
+      "genero": "Comédia"
+    },
+    {
+      "id": 2,
+      "genero": "Drama"
+    },
+    {
+      "id": 3,
+      "genero": "Documentário"
+    }
+  ]
+}
